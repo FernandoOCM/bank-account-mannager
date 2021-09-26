@@ -1,0 +1,25 @@
+{
+  "name": "test-api-rest",
+  "version": "1.0.0",
+  "description": "test dev api rest",
+  "main": "src/api.js",
+  "author": "Fernando Mota",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/api.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "camelcase-keys": "^7.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "jsonschema": "^1.4.0",
+    "moment": "^2.29.1",
+    "pg": "^8.7.1"
+  }
+}

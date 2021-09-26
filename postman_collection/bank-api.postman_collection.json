@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "24ba060a-0fc3-4305-809a-ef42732af44d",
+		"name": "bank-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "account",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dailyWithdrawalLimit\": 500.98,\r\n    \"active\": true,\r\n    \"type\": 1,\r\n    \"creationDate\": \"2021-09-26T09:25:12.313Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_host}}/v1/person/1/account",
+							"host": [
+								"{{api_host}}"
+							],
+							"path": [
+								"v1",
+								"person",
+								"1",
+								"account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get balance",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "update active",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "account transaction",
+			"item": [
+				{
+					"name": "create deposit/withdraw",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": 2,\r\n    \"date\": \"2021-09-26T09:25:12.313Z\",\r\n    \"value\": 200\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_host}}/v1/person/1/account/3/transaction",
+							"host": [
+								"{{api_host}}"
+							],
+							"path": [
+								"v1",
+								"person",
+								"1",
+								"account",
+								"3",
+								"transaction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_host}}/v1/person/1/account/3/transaction?dateStart=2021-09-24&dateFinish=2021-09-26",
+							"host": [
+								"{{api_host}}"
+							],
+							"path": [
+								"v1",
+								"person",
+								"1",
+								"account",
+								"3",
+								"transaction"
+							],
+							"query": [
+								{
+									"key": "dateStart",
+									"value": "2021-09-24"
+								},
+								{
+									"key": "dateFinish",
+									"value": "2021-09-26"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "health check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api_host}}/v1/healthcheck",
+					"host": [
+						"{{api_host}}"
+					],
+					"path": [
+						"v1",
+						"healthcheck"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "api_host",
+			"value": "http://localhost:3000"
+		}
+	]
+}

@@ -1,0 +1,17 @@
+{
+  "files.exclude": {
+    "node_modules": true,
+    ".nyc_output": true,
+    "coverage": true
+  },
+  "javascript.suggestionActions.enabled": false,
+  "typescript.tsc.autoDetect": "off",
+  "typescript.format.enable": false,
+  "typescript.validate.enable": false,
+  "editor.detectIndentation": false,
+  "editor.formatOnSave": true,
+  "editor.rulers": [120],
+  "[yaml]": {
+    "editor.formatOnSave": false
+  }
+}
