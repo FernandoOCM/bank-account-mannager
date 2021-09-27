@@ -21,7 +21,7 @@ require('express-async-errors');
 
 const _init = () => {
   server.use((req, res, next) => {
-    response.error(res, new _error.HttpError(`Route not found - ${req.originalUrl}`, 404, '404-route-found'));
+    response.error(res, new response.HttpError(`Route not found - ${req.originalUrl}`, 404, '404-route-found'));
   });
 
   server.use((err, req, res, next) => {

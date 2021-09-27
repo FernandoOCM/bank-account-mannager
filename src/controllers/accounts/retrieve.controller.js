@@ -9,7 +9,7 @@ const getBalance = async (req, res) => {
   const account = await serviceDb.account.getBalance(accountId, personId);
 
   if (!account) {
-    throw new response.HttpError('account not found', 404, 'bank-api_404_accoun-not-found');
+    throw new response.HttpError('account not found', 404, 'bank-api_404_account-not-found');
   }
 
   return response.success(res, account);
