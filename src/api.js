@@ -34,7 +34,7 @@ const _init = () => {
   });
 };
 
-const basePath = process.env.API_VERSION || '/v1';
+const basePath = '/v1';
 
 //
 //routes
